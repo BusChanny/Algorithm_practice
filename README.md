@@ -14,9 +14,9 @@ public class AlgorithmPractice {
 버전
 <pre>
 <code>
- dependency {
+dependency {
   
-  }
+}
 </code>
 </pre>
  
