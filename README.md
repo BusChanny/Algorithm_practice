@@ -4,7 +4,7 @@
 >입니다.
 
 ```java
-public class BootSpringBootApplication {
+public class AlgorithmPractice {
   public static void main(String[] args) {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
   }
