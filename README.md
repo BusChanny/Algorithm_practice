@@ -10,3 +10,8 @@ public class AlgorithmPractice {
   }
 }
 ```
+
+버전
+  dependency {
+  
+  }
