@@ -12,6 +12,11 @@ public class AlgorithmPractice {
 ```
 
 버전
-  dependency {
+<pre>
+<code>
+ dependency {
   
   }
+</code>
+</pre>
+ 
