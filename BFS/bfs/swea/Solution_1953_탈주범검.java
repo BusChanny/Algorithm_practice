@@ -1,4 +1,4 @@
-package com.algo.BFS;
+package bfs.swea;
 
 import java.io.BufferedReader;
 import java.io.IOException;
