@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
  * |A[0] - A[1]| + |A[1] - A[2]| + ... + |A[N-2] - A[N-1]|
  *  순열로 접근해보자
  */
-public class ch_10819 {
+public class BOJ_10819_차이를최대로 {
     static int N;
     static int[] numbers;
     static int[] selected;

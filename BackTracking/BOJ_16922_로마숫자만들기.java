@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class ch_16922 {
+public class BOJ_16922_로마숫자만들기 {
     static int N;
     static int[] number = {1, 5, 10, 50};
     static boolean[] visited;
