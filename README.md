@@ -10,3 +10,4 @@
 |:----------:|:----------:|:----------:|:----------:|:---------:|
 ||[211025-백트래킹-10819-차이를_최대로](https://github.com/BusChanny/Algorithm_practice/blob/main/BackTracking/BOJ_10819_차이를최대로.java)||||
 ||[211022-백트래킹-16922-로마_숫자_만들기](https://github.com/BusChanny/Algorithm_practice/blob/main/BackTracking/BOJ_16922_로마숫자만들기.java)||||
+||[211025-백트래킹-2529-부등호](https://github.com/BusChanny/Algorithm_practice/blob/main/BackTracking/BOJ_2529_%EB%B6%80%EB%93%B1%ED%98%B8.java)
