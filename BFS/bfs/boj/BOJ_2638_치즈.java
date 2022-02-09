@@ -20,7 +20,7 @@ public class BOJ_2638_치즈 {
     static int[] dy = {0, 0, 1, -1};
     static int N, M;
     static int[][] map;
-    static boolean[][] visited;
+    static int[][] visited;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -28,28 +28,25 @@ public class BOJ_2638_치즈 {
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
         map = new int[N][M];
-        Pos temp = null;
+
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < M; j++) {
                 map[i][j] = Integer.parseInt(st.nextToken());
-                if (map[i][j] == 1) temp = new Pos(i, j);
             }
         }
 
         int time = 0;
         boolean flag = true;
         while (flag){
-            visited = new boolean[N][M];
-            BFS(temp.x, temp.y);
+            visited = new int[N][M];
+            BFS();
 
             flag = false;
             outer: for (int i = 0; i < N; i++) {
                 for (int j = 0; j < M; j++) {
                     if (map[i][j] != 0){
                         flag = true;
-                        temp.x = i;
-                        temp.y = j;
                         break outer;
                     }
                 }
@@ -59,11 +56,10 @@ public class BOJ_2638_치즈 {
         System.out.println(time);
     }
 
-    private static void BFS(int x, int y) {
+    private static void BFS() {
         Queue<Pos> q = new LinkedList<>();
 
-        q.offer(new Pos(x, y));
-        visited[x][y] = true;
+        q.offer(new Pos(0, 0));
 
         while (!q.isEmpty()) {
             Pos temp = q.poll();
@@ -74,16 +70,17 @@ public class BOJ_2638_치즈 {
                 // 방문 체크
                 if (nx < 0 || ny < 0 || nx >= N || ny >= M) continue;
 
-                if (visited[nx][ny]) continue;
 
-                if (map[nx][ny] == 0 && !visited[nx][ny]) cnt++;
-                else {
-                    visited[nx][ny] = true;
+                if (map[nx][ny] == 0 && visited[nx][ny]==0) {
+                    visited[nx][ny] = 1;
                     q.offer(new Pos(nx, ny));
                 }
+                if (map[nx][ny] == 1) {
+                    visited[nx][ny]++;
+                    // 2변 이상 닿아 있어 녹음
+                    if (visited[nx][ny] >= 2) map[nx][ny] = 0;
+                }
             }
-            // 2변 이상이 닿아있으면 지워짐
-            if (cnt >= 2) map[temp.x][temp.y] = 0;
         }
     }
 }
